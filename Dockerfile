@@ -1,5 +1,4 @@
 FROM node:6-onbuild
-
 COPY ./package.json /terminal/package.json
 
 WORKDIR /terminal
