@@ -1,5 +1,5 @@
 {
-  "name": "cf-terminal",
+  "name": "cf-terminal-fork",
   "description": "Provides easy access to Docker container insides!",
   "license": "MIT",
   "dependencies": {
