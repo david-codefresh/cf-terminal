@@ -8,7 +8,7 @@ spec:
     spec:
       containers:
         - name: terminal
-          image: davidcodefresh/cfterminal
+          image: davidcodefresh/cfterminal:master
           ports:
             - containerPort: 3000
               protocol: TCP
