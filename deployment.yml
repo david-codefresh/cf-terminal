@@ -1,0 +1,28 @@
+kind: Deployment
+apiVersion: extensions/v1beta1
+metadata:
+  name: terminal
+spec:
+  replicas: 3
+  template:
+    spec:
+      containers:
+        - name: terminal
+          image: davidcodefresh/cfterminal
+          ports:
+            - containerPort: 3000
+              protocol: TCP
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          imagePullPolicy: Always
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 40
+      dnsPolicy: ClusterFirst
+      securityContext: {}
+      schedulerName: default-scheduler
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 50%
+      maxSurge: 50%
