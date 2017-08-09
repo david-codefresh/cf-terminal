@@ -22,11 +22,6 @@ spec:
       app: terminal
       io.codefresh.auto-generated: 86ca29e6-4fd4-47fd-b68d-92545df9ec97
       io.codefresh.generated-at: '1502177071074'
-  strategy:
-    rollingUpdate:
-      maxSurge: 50%
-      maxUnavailable: 50%
-    type: RollingUpdate
   template:
     metadata:
       annotations:
