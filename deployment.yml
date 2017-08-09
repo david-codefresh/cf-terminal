@@ -1,10 +1,41 @@
 kind: Deployment
 apiVersion: extensions/v1beta1
 metadata:
+  annotations:
+    deployment.kubernetes.io/revision: '3'
+  generation: 4
+  labels:
+    app: terminal
+    io.codefresh.account.name: david-codefresh
+    io.codefresh.auto-generated: 86ca29e6-4fd4-47fd-b68d-92545df9ec97
+    io.codefresh.generated-at: '1502177071074'
+    io.codefresh.pipeline.id: 5961d5255f5c9a8c9ed18288
+    io.codefresh.pipeline.name: cf-terminal
+    io.codefresh.process.id: 598abef638f885fff2c8bc32
+    io.codefresh.scm.branch: master
+    io.codefresh.scm.revision: e5d319181b4a28e19b31a3d3323d8506ab7bd69d
   name: terminal
 spec:
   replicas: 3
+  selector:
+    matchLabels:
+      app: terminal
+      io.codefresh.auto-generated: 86ca29e6-4fd4-47fd-b68d-92545df9ec97
+      io.codefresh.generated-at: '1502177071074'
+  strategy:
+    rollingUpdate:
+      maxSurge: 50%
+      maxUnavailable: 50%
+    type: RollingUpdate
   template:
+    metadata:
+      annotations:
+        forceRedeployUniqId: '1502265249591'
+      creationTimestamp: null
+      labels:
+        app: terminal
+        io.codefresh.auto-generated: 86ca29e6-4fd4-47fd-b68d-92545df9ec97
+        io.codefresh.generated-at: '1502177071074'
     spec:
       containers:
         - name: terminal
