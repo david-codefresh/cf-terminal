@@ -16,7 +16,7 @@ metadata:
     io.codefresh.scm.revision: e5d319181b4a28e19b31a3d3323d8506ab7bd69d
   name: terminal
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: terminal
