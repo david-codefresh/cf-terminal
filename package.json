@@ -1,6 +1,6 @@
 {
-  "name": "cf-terminal-forka",
-  "description": "Provides easy access to Docker container insides!",
+  "name": "cf-terminal-fork",
+  "description": "Provides access to Docker container insides!",
   "license": "MIT",
   "dependencies": {
     "tty.js": "^0.2.15"
